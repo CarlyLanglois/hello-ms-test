@@ -13,18 +13,11 @@ namespace CarTests
             Assert.AreEqual(10, 10, .001);
         }
 
-        Car test_car;
-
-        [TestInitialize]
-        public void CreateCarObject()
-        {
-            test_car = new Car("Toyota", "Prius", 10, 50);
-        }
-
         //TODO: constructor sets gasTankLevel properly
         [TestMethod]
         public void TestInitialGasTank()
         {
+            Car test_car = new Car("Toyota", "Prius", 10, 50);
             Assert.AreEqual(10, test_car.GasTankLevel, .001);
         }
 
